@@ -1,5 +1,4 @@
 import { StyleSheet, TouchableOpacity, View } from "react-native"
-import { AVVText } from "./AVVText"
 import { PreviewBackground } from "../utils/PreviewBackground"
 import { useState, useCallback } from "react"
 

@@ -1,7 +1,7 @@
 import { TouchableOpacity } from "react-native"
 import { AVVText } from "./AVVText"
 
-const SingleScore = ({team, score, isSelected, onPress}) => {
+export const SingleScore = ({team, score, isSelected, onPress}) => {
     const scoreStyle = [
         s.scoreContainer,
         containerIsTouchable && isSelected && s.scoreContainerSelected
@@ -18,5 +18,3 @@ const SingleScore = ({team, score, isSelected, onPress}) => {
         </TouchableOpacity>
     )
 }
-
-export default SingleScore
