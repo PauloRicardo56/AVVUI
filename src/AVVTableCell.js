@@ -1,7 +1,7 @@
 import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { PreviewBackground } from "../utils/PreviewBackground";
 import { useCallback, useState } from "react";
-import { AVVText } from "./AVVText";
+import AVVText from "./AVVText";
 
 const AVVTableCell = ({
     children,

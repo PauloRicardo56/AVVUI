@@ -1,10 +1,10 @@
 import { FlatList, StyleSheet, View } from "react-native";
 import { PreviewBackground } from "../utils/PreviewBackground";
-import { AVVTableCell } from "./AVVTableCell";
+import AVVTableCell from "./AVVTableCell";
 import { useState, useCallback } from "react";
 // import { AVVTitleTableCell } from "./AVVTitleTableCell";
-import { AVVGameTableCell } from "./AVVGameTableCell";
-import { AVVTitleTableCell } from "./AVVTitleTableCell";
+import AVVGameTableCell from "./AVVGameTableCell";
+import AVVTitleTableCell from "./AVVTitleTableCell";
 
 const AVVTable = ({ style, data, avvCell=()=>{} }) => {
     const [selectedIndex, setSelectedIndex] = useState(-1)

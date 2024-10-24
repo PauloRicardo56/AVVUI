@@ -1,6 +1,6 @@
 import { Text, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { PreviewBackground } from '../utils/PreviewBackground';
-import { AVVText } from './AVVText';
+import AVVText from './AVVText';
 
 const AVVButton = ({ title, style, onPress }) => {
     return(
@@ -16,14 +16,14 @@ const AVVButton = ({ title, style, onPress }) => {
             onPress={onPress}
             disabled={style === 'disabled'}
         >
-            <AVVText typography={'button'} style={style === 'disabled' && s.buttonTextDisabled}>
+            <AVVText style={style === 'disabled' && s.buttonTextDisabled} typography={'button'}>
                 {title}
             </AVVText>
         </TouchableOpacity>
     )
 }
 
-export default AVVButton;
+export default AVVButton
 
 const s = StyleSheet.create({
     button: {

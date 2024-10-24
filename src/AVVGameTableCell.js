@@ -1,8 +1,8 @@
 import { StyleSheet, View } from "react-native"
-import { AVVTableCell } from "./AVVTableCell"
-import { AVVText } from "./AVVText"
 import { formatMonthDay, formatWeekDay } from "../utils/DateFormatter"
 import { formatVASCO } from "../utils/StringFormatter"
+import AVVTableCell from "./AVVTableCell"
+import AVVText from "./AVVText"
 
 const AVVGameTableCell = ({
     match,

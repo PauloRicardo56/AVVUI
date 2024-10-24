@@ -1,9 +1,9 @@
-import { StyleSheet, TouchableOpacity, View } from "react-native"
-import { AVVText } from "./AVVText"
-import { PreviewBackground } from "../utils/PreviewBackground"
-import { useState, useCallback } from "react"
+import { StyleSheet, View, TouchableOpacity } from "react-native";
+import { PreviewBackground } from "../utils/PreviewBackground";
+import { useState, useCallback } from "react";
+import AVVText from "./AVVText";
 
-var containerIsTouchable = false
+var containerIsTouchable = false;
 
 const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
     const [selectedIndex, setSelectedIndex] = useState(-1)
@@ -13,15 +13,14 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
             onSelectionChange(index)
         }
     }, []);
-    containerIsTouchable = isTouchable
     
     return (
         <View style={s.container}>
-            <SingleScore 
+            <SingleScore
                 team={home.team} 
                 score={home.score} 
                 isSelected={selectedIndex === 0} 
-                onPress={() => handlePress(0)} 
+                onPress={() => handlePress(0)}
             />
             
             <SingleScore 
@@ -32,10 +31,8 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
             />
 
         </View>
-    )
+    );
 }
-
-export default AVVScore
 
 const SingleScore = ({team, score, isSelected, onPress}) => {
     const scoreStyle = [
@@ -52,8 +49,11 @@ const SingleScore = ({team, score, isSelected, onPress}) => {
             <AVVText style={s.teamTitle} typography={'h4'}> {team} </AVVText>
             <AVVText typography={'h1'}> {score} </AVVText>
         </TouchableOpacity>
-    )
+    );
 }
+
+export default AVVScore;
+export { SingleScore };
 
 const s = StyleSheet.create({
     container: {
