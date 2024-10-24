@@ -1,4 +1,4 @@
-import { TouchableOpacity } from "react-native"
+import { TouchableOpacity, StyleSheet } from "react-native"
 import { AVVText } from "./AVVText"
 
 const SingleScore = ({team, score, isSelected, onPress}) => {
@@ -20,3 +20,10 @@ const SingleScore = ({team, score, isSelected, onPress}) => {
 }
 
 export default SingleScore
+
+const s = StyleSheet.create({
+    teamTitle: {
+        textAlign: 'center',
+        width: '86%',
+    }
+})
