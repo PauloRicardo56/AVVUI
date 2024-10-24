@@ -16,9 +16,9 @@ const AVVButton = ({ title, style, onPress }) => {
             onPress={onPress}
             disabled={style === 'disabled'}
         >
-            {/* <AVVText typography={'button'} style={style === 'disabled' && s.buttonTextDisabled}>
+            <AVVText style={style === 'disabled' && s.buttonTextDisabled} typography={'button'}>
                 {title}
-            </AVVText> */}
+            </AVVText>
         </TouchableOpacity>
     )
 }
