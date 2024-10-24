@@ -1,8 +1,8 @@
 import { StyleSheet, View } from "react-native"
 import { AVVTableCell } from "./AVVTableCell"
 import { AVVText } from "./AVVText"
-import { formatMonthDay, formatWeekDay } from "../../utils/DateFormatter"
-import { formatVASCO } from "../../utils/StringFormatter"
+import { formatMonthDay, formatWeekDay } from "../utils/DateFormatter"
+import { formatVASCO } from "../utils/StringFormatter"
 
 export const AVVGameTableCell = ({
     match,
@@ -34,7 +34,6 @@ export const AVVGameTableCell = ({
                     <AVVText typography={'bodybold'}> {match.away.score} </AVVText>
                 </View>
                 
-                {/* <AVVText style={s.status} typography={'annotation'}> 1⁰ 22:31 </AVVText> */}
                 <AVVText style={s.status} typography={'annotation'}> {matchStatus(match.status)} </AVVText>
             </View>
         </AVVTableCell>

@@ -1,19 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { AVVButton_Preview } from './src/components/AVVButton';
-import { AVVTextField_Preview } from './src/components/AVVTextField';
-import { AVVText_Preview } from './src/components/AVVText';
-import { AVVScore_Preview } from './src/components/AVVScore';
-import { AVVTableCell_Preview } from './src/components/AVVTableCell';
-import { AVVTable_Preview } from './src/components/AVVTable';
+import { AVVButton_Preview } from './src/AVVButton';
+import { AVVTextField_Preview } from './src/AVVTextField';
+import { AVVText_Preview } from './src/AVVText';
+import { AVVScore_Preview } from './src/AVVScore';
+
+import { AVVTable_Preview } from './src/AVVTable';
+import { AVVTableCell_Preview } from './src/AVVTableCell';
 
 export default function App() {
   return (
+    // <></>
     // <AVVTextField_Preview />
     // <AVVButton_Preview />
     // <AVVText_Preview />
     // <AVVScore_Preview />
-    // <AVVTableCell_Preview />
     <AVVTable_Preview />
   );
 }

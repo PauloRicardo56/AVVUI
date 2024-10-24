@@ -17,8 +17,8 @@ export const AVVTitleTableCell = ({
             onPress={onPress}
         >
             { orientation == "left"
-                ? <AVVText typography={'body'} style={s.title}> {title} </AVVText>
-                : <AVVText typography={'body'} style={[s.title, s.rightIndent]}> {title} </AVVText>
+                ? <AVVText style={s.title}> {title} </AVVText>
+                : <AVVText style={[s.title, s.rightIndent]}> {title} </AVVText>
             }
         </AVVTableCell>
     )

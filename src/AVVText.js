@@ -1,8 +1,8 @@
 import { StyleSheet, Text } from "react-native"
-import { Typography } from "../../utils/Typography"
-import { PreviewBackground } from "../../utils/PreviewBackground"
+import { Typography } from "../utils/Typography"
+import { PreviewBackground } from "../utils/PreviewBackground"
 
-export const AVVText = ({children, typography, style }) => {
+export const AVVText = ({ style, typography='body', children }) => {
     return (
         <Text style={[
             { color: 'white' },

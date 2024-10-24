@@ -1,5 +1,5 @@
 import { Text, StyleSheet, TouchableOpacity, View } from 'react-native';
-import { PreviewBackground } from '../../utils/PreviewBackground';
+import { PreviewBackground } from '../utils/PreviewBackground';
 import { AVVText } from './AVVText';
 
 const AVVButton = ({ title, style, onPress }) => {
@@ -22,6 +22,8 @@ const AVVButton = ({ title, style, onPress }) => {
         </TouchableOpacity>
     )
 }
+
+export default AVVButton;
 
 const s = StyleSheet.create({
     button: {
@@ -65,11 +67,11 @@ const s = StyleSheet.create({
 export const AVVButton_Preview = () => {
     return (
         <PreviewBackground>
-            <AVVButton title={"Title"} style={'success'} />
-            <AVVButton title={"Title"} style={'info'} />
-            <AVVButton title={"Title"} style={'neutral'} />
-            <AVVButton title={"Title"} style={'failure'} />
-            <AVVButton title={"Title"} style={'disabled'} />
+            <AVVButton style={'success'} title={"Title"} />
+            <AVVButton style={'info'} title={"Title"} />
+            <AVVButton style={'neutral'} title={"Title"} />
+            <AVVButton style={'failure'} title={"Title"} />
+            <AVVButton style={'disabled'} title={"Title"} />
         </PreviewBackground>
     )
 }
