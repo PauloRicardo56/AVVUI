@@ -3,7 +3,7 @@ import { PreviewBackground } from "../utils/PreviewBackground";
 import { useCallback, useState } from "react";
 import { AVVText } from "./AVVText";
 
-export const AVVTableCell = ({
+const AVVTableCell = ({
     children,
     style,
     isSelected=false,
@@ -34,6 +34,8 @@ export const AVVTableCell = ({
         </TouchableOpacity>
     );
 }
+
+export default AVVTableCell
 
 const s = StyleSheet.create({
     container: {

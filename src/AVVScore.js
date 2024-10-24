@@ -35,6 +35,8 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
     )
 }
 
+export default AVVScore
+
 const SingleScore = ({team, score, isSelected, onPress}) => {
     const scoreStyle = [
         s.scoreContainer,

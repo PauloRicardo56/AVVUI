@@ -4,7 +4,7 @@ import { AVVText } from "./AVVText"
 import { formatMonthDay, formatWeekDay } from "../utils/DateFormatter"
 import { formatVASCO } from "../utils/StringFormatter"
 
-export const AVVGameTableCell = ({
+const AVVGameTableCell = ({
     match,
     isSelectionEnabled=false,
     isSelected=false,
@@ -39,6 +39,8 @@ export const AVVGameTableCell = ({
         </AVVTableCell>
     )
 }
+
+export default AVVGameTableCell
 
 function matchStatus(status) {
     if (status == 'FINAL_TIME') {

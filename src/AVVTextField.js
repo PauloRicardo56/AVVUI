@@ -28,6 +28,8 @@ const AVVTextField = ({title, subtitle, placeholder, value}) => {
     )
 }
 
+export default AVVTextField
+
 const s = StyleSheet.create({
     container: {
         width: '100%'

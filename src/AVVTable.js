@@ -27,6 +27,8 @@ const AVVTable = ({ style, data, avvCell=()=>{} }) => {
     )
 }
 
+export default AVVTable
+
 const s = StyleSheet.create({
     container: {
         width: '100%',

@@ -24,6 +24,8 @@ export const AVVTitleTableCell = ({
     )
 }
 
+export default AVVTitleTableCell
+
 const s = StyleSheet.create({
     title: {
         paddingBottom: 8,
