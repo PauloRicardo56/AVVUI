@@ -1,7 +1,6 @@
 import { StyleSheet, View } from "react-native"
 import { PreviewBackground } from "../utils/PreviewBackground"
 import { useState, useCallback } from "react"
-import { SingleScore } from "./SingleScore"
 
 const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
     const [selectedIndex, setSelectedIndex] = useState(-1)
@@ -29,6 +28,25 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
             /> */}
 
         </View>
+    )
+}
+
+const SingleScore = ({team, score, isSelected, onPress}) => {
+    const scoreStyle = [
+        s.scoreContainer,
+        // containerIsTouchable && isSelected && s.scoreContainerSelected
+    ]
+
+    return (
+        <></>
+        // <TouchableOpacity 
+        //     style={scoreStyle}
+        //     // disabled={!containerIsTouchable}
+        //     onPress={onPress}
+        // >
+        //     {/* <AVVText style={s.teamTitle} typography={'h4'}> {team} </AVVText>
+        //     <AVVText typography={'h1'}> {score} </AVVText> */}
+        // </TouchableOpacity>
     )
 }
 
