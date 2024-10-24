@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native"
 import { AVVTableCell } from "./AVVTableCell"
 import { AVVText } from "./AVVText"
 
-export const AVVTitleTableCell = ({
+const AVVTitleTableCell = ({
     title,
     orientation='left',
     isSelectionEnabled=false,

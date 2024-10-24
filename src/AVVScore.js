@@ -2,8 +2,6 @@ import { StyleSheet, View } from "react-native"
 import { PreviewBackground } from "../utils/PreviewBackground"
 import { useState, useCallback } from "react"
 
-export default AVVScore
-
 const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
     const [selectedIndex, setSelectedIndex] = useState(-1)
     const handlePress = useCallback((index) => {
@@ -32,6 +30,8 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
         </View>
     )
 }
+
+export default AVVScore
 
 const s = StyleSheet.create({
     container: {
