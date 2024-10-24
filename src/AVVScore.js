@@ -13,6 +13,7 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
     }, []);
     
     return (
+        <></>
         // <View style={s.container}>
         //     <SingleScore
         //         team={home.team} 
