@@ -1,0 +1,1 @@
+export { default as AVVText } from './src/AVVText';
