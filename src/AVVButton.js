@@ -2,6 +2,8 @@ import { Text, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { PreviewBackground } from '../utils/PreviewBackground';
 import { AVVText } from './AVVText';
 
+export default AVVButton
+
 const AVVButton = ({ title, style, onPress }) => {
     return(
         <TouchableOpacity
@@ -22,8 +24,6 @@ const AVVButton = ({ title, style, onPress }) => {
         </TouchableOpacity>
     )
 }
-
-export default AVVButton
 
 const s = StyleSheet.create({
     button: {

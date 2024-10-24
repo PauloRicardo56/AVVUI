@@ -1,10 +1,10 @@
-import { StyleSheet, TouchableOpacity, View } from "react-native"
+import { StyleSheet, View } from "react-native"
 import { PreviewBackground } from "../utils/PreviewBackground"
 import { useState, useCallback } from "react"
 
-var containerIsTouchable = false
+export default AVVScore
 
-export const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
+const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
     const [selectedIndex, setSelectedIndex] = useState(-1)
     const handlePress = useCallback((index) => {
         setSelectedIndex(index);
@@ -12,7 +12,6 @@ export const AVVScore = ({ home, away, isTouchable = false, onSelectionChange })
             onSelectionChange(index)
         }
     }, []);
-    containerIsTouchable = isTouchable
     
     return (
         <View style={s.container}>
