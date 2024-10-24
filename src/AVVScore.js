@@ -20,12 +20,12 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
                 onPress={() => handlePress(0)}
             />
             
-            {/* <SingleScore 
+            <SingleScore 
                 team={away.team} 
                 score={away.score} 
                 isSelected={selectedIndex === 1} 
                 onPress={() => handlePress(1)} 
-            /> */}
+            />
 
         </View>
     )
@@ -34,19 +34,18 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
 const SingleScore = ({team, score, isSelected, onPress}) => {
     const scoreStyle = [
         s.scoreContainer,
-        // containerIsTouchable && isSelected && s.scoreContainerSelected
+        containerIsTouchable && isSelected && s.scoreContainerSelected
     ]
 
     return (
-        <></>
-        // <TouchableOpacity 
-        //     style={scoreStyle}
-        //     // disabled={!containerIsTouchable}
-        //     onPress={onPress}
-        // >
-        //     {/* <AVVText style={s.teamTitle} typography={'h4'}> {team} </AVVText>
-        //     <AVVText typography={'h1'}> {score} </AVVText> */}
-        // </TouchableOpacity>
+        <TouchableOpacity 
+            style={scoreStyle}
+            disabled={!containerIsTouchable}
+            onPress={onPress}
+        >
+            <AVVText style={s.teamTitle} typography={'h4'}> {team} </AVVText>
+            <AVVText typography={'h1'}> {score} </AVVText>
+        </TouchableOpacity>
     )
 }
 
