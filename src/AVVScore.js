@@ -47,6 +47,7 @@ const SingleScore = ({team, score, isSelected, onPress}) => {
             // onPress={onPress}
         >
             <AVVText style={s.teamTitle} typography={'h4'}> {team} </AVVText>
+            <AVVText typography={'h1'}> {score} </AVVText>
         </TouchableOpacity>
     );
 }
