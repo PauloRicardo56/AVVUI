@@ -4,21 +4,20 @@ import { PreviewBackground } from "../utils/PreviewBackground"
 
 const AVVText = ({ style, typography='body', children }) => {
     return (
-        <></>
-        // <Text style={[
-        //     { color: 'white' },
-        //     typography === 'h1' && s.h1,
-        //     typography === 'h4' && s.h4,
-        //     typography === 'h5' && s.h5,
-        //     typography === 'bodybold' && s.bodybold,
-        //     typography === 'body' && s.body,
-        //     typography === 'caption' && s.caption,
-        //     typography === 'annotation' && s.annotation,
-        //     typography === 'button' && s.button,
-        //     style,
-        // ]}>
-        //     {children}
-        // </Text>
+        <Text style={[
+            { color: 'white' },
+            typography === 'h1' && s.h1,
+            typography === 'h4' && s.h4,
+            typography === 'h5' && s.h5,
+            typography === 'bodybold' && s.bodybold,
+            typography === 'body' && s.body,
+            typography === 'caption' && s.caption,
+            typography === 'annotation' && s.annotation,
+            typography === 'button' && s.button,
+            style,
+        ]}>
+            {children}
+        </Text>
     )
 }
 
