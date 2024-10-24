@@ -13,23 +13,22 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
     }, []);
     
     return (
-        <></>
-        // <View style={s.container}>
-        //     <SingleScore
-        //         team={home.team} 
-        //         score={home.score} 
-        //         isSelected={selectedIndex === 0} 
-        //         onPress={() => handlePress(0)} 
-        //     />
+        <View style={s.container}>
+            {/* <SingleScore
+                team={home.team} 
+                score={home.score} 
+                isSelected={selectedIndex === 0} 
+                onPress={() => handlePress(0)} 
+            />
             
-        //     <SingleScore 
-        //         team={away.team} 
-        //         score={away.score} 
-        //         isSelected={selectedIndex === 1} 
-        //         onPress={() => handlePress(1)} 
-        //     />
+            <SingleScore 
+                team={away.team} 
+                score={away.score} 
+                isSelected={selectedIndex === 1} 
+                onPress={() => handlePress(1)} 
+            /> */}
 
-        // </View>
+        </View>
     )
 }
 
