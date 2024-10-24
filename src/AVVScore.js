@@ -1,6 +1,7 @@
-import { StyleSheet, View } from "react-native"
+import { StyleSheet, View, TouchableOpacity } from "react-native"
 import { PreviewBackground } from "../utils/PreviewBackground"
 import { useState, useCallback } from "react"
+import { AVVText } from "./AVVText"
 
 var containerIsTouchable = false
 
