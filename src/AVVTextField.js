@@ -1,7 +1,7 @@
 import { View, StyleSheet, TextInput } from 'react-native';
 import { PreviewBackground } from '../utils/PreviewBackground';
 import { Typography } from '../utils/Typography';
-import { AVVText } from './AVVText';
+import AVVText from './AVVText';
 
 const AVVTextField = ({title, subtitle, placeholder, value}) => {
     return(

@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native"
-import { AVVTableCell } from "./AVVTableCell"
-import { AVVText } from "./AVVText"
+import AVVTableCell from "./AVVTableCell"
+import AVVText from "./AVVText"
 
 const AVVTitleTableCell = ({
     title,
