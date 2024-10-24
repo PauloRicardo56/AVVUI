@@ -35,10 +35,10 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
 }
 
 const SingleScore = ({team, score, isSelected, onPress}) => {
-    // const scoreStyle = [
-    //     s.scoreContainer,
-    //     containerIsTouchable && isSelected && s.scoreContainerSelected
-    // ]
+    const scoreStyle = [
+        s.scoreContainer,
+        containerIsTouchable && isSelected && s.scoreContainerSelected
+    ]
 
     return (
         <></>
