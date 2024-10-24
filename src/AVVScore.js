@@ -1,6 +1,7 @@
 import { StyleSheet, View } from "react-native"
 import { PreviewBackground } from "../utils/PreviewBackground"
 import { useState, useCallback } from "react"
+import SingleScore from "./SingleScore"
 
 const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
     const [selectedIndex, setSelectedIndex] = useState(-1)
@@ -13,7 +14,7 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
     
     return (
         <View style={s.container}>
-            <SingleScore 
+            <SingleScore
                 team={home.team} 
                 score={home.score} 
                 isSelected={selectedIndex === 0} 
