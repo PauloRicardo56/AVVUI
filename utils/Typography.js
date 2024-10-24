@@ -1,5 +1,3 @@
-
-
 export const Typography = {
     h1: {
         fontSize: 100,

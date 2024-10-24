@@ -1,13 +1,13 @@
 import { View, StyleSheet, TextInput } from 'react-native';
-import { PreviewBackground } from '../../utils/PreviewBackground';
-import { Typography } from '../../utils/Typography';
+import { PreviewBackground } from '../utils/PreviewBackground';
+import { Typography } from '../utils/Typography';
 import { AVVText } from './AVVText';
 
 const AVVTextField = ({title, subtitle, placeholder, value}) => {
     return(
         <View style={s.container}>
             { title != null
-                ? <AVVText typography={'caption'} style={s.title}> {title} </AVVText>
+                ? <AVVText style={s.title} typography={'caption'}> {title} </AVVText>
                 : <></>
             }
 
@@ -20,13 +20,15 @@ const AVVTextField = ({title, subtitle, placeholder, value}) => {
             />
 
             { subtitle != null
-                ? <AVVText typography={'annotation'} style={s.subtitle}> {subtitle} </AVVText>
+                ? <AVVText style={s.subtitle} typography={'annotation'}> {subtitle} </AVVText>
                 : <></>
             }
             
         </View>
     )
 }
+
+export default AVVTextField
 
 const s = StyleSheet.create({
     container: {

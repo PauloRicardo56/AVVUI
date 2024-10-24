@@ -1,6 +1,6 @@
 import { StyleSheet, TouchableOpacity, View } from "react-native"
 import { AVVText } from "./AVVText"
-import { PreviewBackground } from "../../utils/PreviewBackground"
+import { PreviewBackground } from "../utils/PreviewBackground"
 import { useState, useCallback } from "react"
 
 var containerIsTouchable = false
@@ -35,6 +35,8 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
     )
 }
 
+export default AVVScore
+
 const SingleScore = ({team, score, isSelected, onPress}) => {
     const scoreStyle = [
         s.scoreContainer,
@@ -47,7 +49,7 @@ const SingleScore = ({team, score, isSelected, onPress}) => {
             disabled={!containerIsTouchable}
             onPress={onPress}
         >
-            <AVVText typography={'h4'} style={s.teamTitle} > {team} </AVVText>
+            <AVVText style={s.teamTitle} typography={'h4'}> {team} </AVVText>
             <AVVText typography={'h1'}> {score} </AVVText>
         </TouchableOpacity>
     )
