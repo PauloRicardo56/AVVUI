@@ -3,6 +3,8 @@ import { AVVText } from "./AVVText"
 import { PreviewBackground } from "../utils/PreviewBackground"
 import { useState, useCallback } from "react"
 
+export default AVVScore;
+
 var containerIsTouchable = false
 
 const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
@@ -35,9 +37,7 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
     )
 }
 
-export default AVVScore
-
-const SingleScore = ({team, score, isSelected, onPress}) => {
+export const SingleScore = ({team, score, isSelected, onPress}) => {
     const scoreStyle = [
         s.scoreContainer,
         containerIsTouchable && isSelected && s.scoreContainerSelected
@@ -54,6 +54,7 @@ const SingleScore = ({team, score, isSelected, onPress}) => {
         </TouchableOpacity>
     )
 }
+
 
 const s = StyleSheet.create({
     container: {
