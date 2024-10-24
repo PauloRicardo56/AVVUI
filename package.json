@@ -1,6 +1,6 @@
 {
   "name": "avvui",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "_main": "expo/App.js",
   "main": "index.js",
   "scripts": {
