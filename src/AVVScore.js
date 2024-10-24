@@ -46,7 +46,7 @@ const SingleScore = ({team, score, isSelected, onPress}) => {
             // disabled={!containerIsTouchable}
             // onPress={onPress}
         >
-            <AVVText typography={'h1'}> {score} </AVVText>
+            <AVVText style={s.teamTitle} typography={'h4'}> {team} </AVVText>
         </TouchableOpacity>
     );
 }
