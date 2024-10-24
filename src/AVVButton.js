@@ -1,6 +1,6 @@
 import { Text, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { PreviewBackground } from '../utils/PreviewBackground';
-import { AVVText } from './AVVText';
+import AVVText from './AVVText';
 
 const AVVButton = ({ title, style, onPress }) => {
     return(
