@@ -3,8 +3,6 @@ import { PreviewBackground } from '../utils/PreviewBackground';
 import { Typography } from '../utils/Typography';
 import { AVVText } from './AVVText';
 
-export default AVVTextField
-
 const AVVTextField = ({title, subtitle, placeholder, value}) => {
     return(
         <View style={s.container}>
@@ -29,6 +27,8 @@ const AVVTextField = ({title, subtitle, placeholder, value}) => {
         </View>
     )
 }
+
+export default AVVTextField
 
 const s = StyleSheet.create({
     container: {
