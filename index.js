@@ -1,7 +1,7 @@
 export { default as AVVButton } from "./src/AVVButton";
 export { default as AVVGameTableCell } from "./src/AVVGameTableCell";
 export { default as AVVScore } from "./src/AVVScore";
-export { default as AVVSingleScore } from "./src/AVVSingleScore";
+export { default as SingleScore } from "./src/SingleScore"
 export { default as AVVTable } from "./src/AVVTable";
 export { default as AVVTableCell } from "./src/AVVTableCell";
 export { default as AVVText } from "./src/AVVText";
