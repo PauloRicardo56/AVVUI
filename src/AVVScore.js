@@ -14,12 +14,12 @@ const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
     
     return (
         <View style={s.container}>
-            {/* <SingleScore
+            <SingleScore
                 team={home.team} 
                 score={home.score} 
                 isSelected={selectedIndex === 0} 
-                onPress={() => handlePress(0)} 
-            /> */}
+                // onPress={() => handlePress(0)} 
+            />
             
             {/* <SingleScore 
                 team={away.team} 
