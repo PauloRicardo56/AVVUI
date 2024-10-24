@@ -4,13 +4,13 @@ import { AVVText } from "./AVVText"
 const SingleScore = ({team, score, isSelected, onPress}) => {
     const scoreStyle = [
         s.scoreContainer,
-        containerIsTouchable && isSelected && s.scoreContainerSelected
+        // containerIsTouchable && isSelected && s.scoreContainerSelected
     ]
 
     return (
         <TouchableOpacity 
             style={scoreStyle}
-            disabled={!containerIsTouchable}
+            // disabled={!containerIsTouchable}
             onPress={onPress}
         >
             <AVVText style={s.teamTitle} typography={'h4'}> {team} </AVVText>
