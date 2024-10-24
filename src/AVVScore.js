@@ -46,7 +46,6 @@ const SingleScore = ({team, score, isSelected, onPress}) => {
             // disabled={!containerIsTouchable}
             // onPress={onPress}
         >
-            <AVVText style={s.teamTitle} typography={'h4'}> {team} </AVVText>
             <AVVText typography={'h1'}> {score} </AVVText>
         </TouchableOpacity>
     );
@@ -54,7 +53,6 @@ const SingleScore = ({team, score, isSelected, onPress}) => {
 
 export default AVVScore
 export { SingleScore }
-export { AVVText }
 
 const s = StyleSheet.create({
     container: {
