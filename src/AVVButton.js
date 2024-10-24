@@ -23,7 +23,7 @@ const AVVButton = ({ title, style, onPress }) => {
     )
 }
 
-export default AVVButton;
+export default AVVButton
 
 const s = StyleSheet.create({
     button: {
