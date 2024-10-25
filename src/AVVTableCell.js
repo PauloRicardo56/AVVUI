@@ -24,7 +24,7 @@ const AVVTableCell = ({
     return(
         <TouchableOpacity style={cellStyle}
             disabled={!isSelectionEnabled}
-            onPress={handlePress}
+            onPress={onPress}
         >
             {children}
             { hideSeparator

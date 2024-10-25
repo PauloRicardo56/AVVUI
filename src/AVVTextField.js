@@ -3,7 +3,14 @@ import { PreviewBackground } from '../utils/PreviewBackground';
 import { Typography } from '../utils/Typography';
 import AVVText from './AVVText';
 
-const AVVTextField = ({title, subtitle, placeholder, value}) => {
+const AVVTextField = ({
+    title,
+    subtitle,
+    placeholder,
+    value,
+    onChangeText=() => {},
+    onEndEditing=() => {}
+}) => {
     return(
         <View style={s.container}>
             { title != null
@@ -17,6 +24,8 @@ const AVVTextField = ({title, subtitle, placeholder, value}) => {
                 placeholder={placeholder}
                 placeholderTextColor={"#464646"}
                 cursorColor={'white'}
+                onChangeText={onChangeText}
+                onEndEditing={onEndEditing}
             />
 
             { subtitle != null
