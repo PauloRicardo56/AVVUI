@@ -8,6 +8,7 @@ const AVVTextField = ({
     subtitle,
     placeholder,
     value,
+    onChangeText=() => {},
     onEndEditing=() => {}
 }) => {
     return(
@@ -23,6 +24,7 @@ const AVVTextField = ({
                 placeholder={placeholder}
                 placeholderTextColor={"#464646"}
                 cursorColor={'white'}
+                onChangeText={onChangeText}
                 onEndEditing={onEndEditing}
             />
 
