@@ -13,6 +13,7 @@ const AVVTable = ({ style, data, avvCell=()=>{} }) => {
         <FlatList
             style={[s.container, style]}
             data={data}
+            // TODO: figure way to clear selected index when reloading table, so the background will not appear (current implementation does not work.)
             onLayout={ () => { setSelectedIndex(-1); console.log(1234567894561230) } }
             renderItem={({ item, index }) => (
                 <View key={index}>
