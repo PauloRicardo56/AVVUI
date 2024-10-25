@@ -11,6 +11,7 @@ const AVVScore = ({
     isTouchable = false, 
     onSelectionChange 
 }) => {
+    containerIsTouchable = isTouchable
     const [selectedIndex, setSelectedIndex] = useState(-1)
     const handlePress = useCallback((index) => {
         setSelectedIndex(index);
