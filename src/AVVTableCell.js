@@ -13,7 +13,7 @@ const AVVTableCell = ({
     backgroundWhenSelected='#474747'
 }) => {
     const handlePress = useCallback(() => {
-        onPress()
+        onPress
     }, [])
     const cellStyle = [
         s.container,
@@ -24,7 +24,7 @@ const AVVTableCell = ({
     return(
         <TouchableOpacity style={cellStyle}
             disabled={!isSelectionEnabled}
-            onPress={() => onPress}
+            onPress={handlePress}
         >
             {children}
             { hideSeparator
