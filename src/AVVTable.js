@@ -13,7 +13,7 @@ const AVVTable = ({ style, data, avvCell=()=>{} }) => {
         <FlatList
             style={[s.container, style]}
             data={data}
-            onLayout={setSelectedIndex(-1)}
+            onLayout={ () => setSelectedIndex(-1) }
             renderItem={({ item, index }) => (
                 <View key={index}>
                     {avvCell(
