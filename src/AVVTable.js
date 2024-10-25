@@ -32,6 +32,7 @@ export default AVVTable
 const s = StyleSheet.create({
     container: {
         width: '100%',
+        paddingVertical: 10,
     }
 })
 
