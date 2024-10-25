@@ -15,7 +15,8 @@ export default function App() {
     // <AVVButton_Preview />
     // <AVVText_Preview />
     // <AVVScore_Preview />
-    <AVVScore_Preview />
+    // <AVVScore_Preview />
+    <AVVTable_Preview />
   );
 }
 

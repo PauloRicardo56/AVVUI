@@ -13,6 +13,7 @@ const AVVTable = ({ style, data, avvCell=()=>{} }) => {
         <FlatList
             style={[s.container, style]}
             data={data}
+            onLayout={console.log(685465216841)}
             renderItem={({ item, index }) => (
                 <View key={index}>
                     {avvCell(
