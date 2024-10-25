@@ -5,7 +5,12 @@ import AVVText from "./AVVText";
 
 var containerIsTouchable = false;
 
-const AVVScore = ({ home, away, isTouchable = false, onSelectionChange }) => {
+const AVVScore = ({ 
+    home={ team: "", score: 0 }, 
+    away={ team: "", score: 0 }, 
+    isTouchable = false, 
+    onSelectionChange 
+}) => {
     const [selectedIndex, setSelectedIndex] = useState(-1)
     const handlePress = useCallback((index) => {
         setSelectedIndex(index);
