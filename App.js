@@ -7,6 +7,7 @@ import AVVScore, { AVVScore_Preview } from './src/AVVScore';
 
 import { AVVTable_Preview } from './src/AVVTable';
 import { AVVTableCell_Preview } from './src/AVVTableCell';
+import { AVVMatchTimer_Preview } from './src/AVVMatchTimer';
 
 export default function App() {
   return (
@@ -16,7 +17,8 @@ export default function App() {
     // <AVVText_Preview />
     // <AVVScore_Preview />
     // <AVVScore_Preview />
-    <AVVTable_Preview />
+    // <AVVTable_Preview />
+    <AVVMatchTimer_Preview></AVVMatchTimer_Preview>
   );
 }
 
