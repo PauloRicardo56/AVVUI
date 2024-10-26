@@ -7,6 +7,7 @@ export { default as AVVTableCell } from "./src/AVVTableCell";
 export { default as AVVText } from "./src/AVVText";
 export { default as AVVTextField } from "./src/AVVTextField";
 export { default as AVVTitleTableCell } from "./src/AVVTitleTableCell";
+export { default as AVVTimer } from "./src/AVVTimer";
 
 export const test = () => {
     return (
