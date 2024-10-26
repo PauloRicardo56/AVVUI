@@ -3,7 +3,7 @@ import { View, Text, Button } from 'react-native';
 import AVVText from './AVVText';
 import { PreviewBackground } from '../utils/PreviewBackground';
 
-const AVVMatchTimer = ({ isoString, typography='body', textColor='white' }) => {
+const AVVMatchTimer = ({ style, isoString, typography='body', textColor='white' }) => {
     const initialTime = new Date(isoString)
     const currTime = new Date()
     const difference = currTime - initialTime
@@ -29,7 +29,7 @@ const AVVMatchTimer = ({ isoString, typography='body', textColor='white' }) => {
     }, [isRunning, seconds]);
 
     return (
-        <View style={{ alignItems: 'center', padding: 20 }}>
+        <View style={[{ alignItems: 'center', padding: 20 }, style]}>
             <AVVText
                 style={{ color: textColor }}
                 typography={typography}
