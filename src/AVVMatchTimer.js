@@ -8,7 +8,8 @@ const AVVMatchTimer = ({
     isoString,
     period='FIRST_HALF',
     typography='body',
-    textColor='white'
+    textColor='white',
+    onTimeUpdate
 }) => {
     const initialTime = new Date(isoString)
     const currTime = new Date()
@@ -22,17 +23,21 @@ const AVVMatchTimer = ({
     const formatTwoDigits = (num) => String(num).padStart(2, '0');
 
     useEffect(() => {
-        let intervalId;
-        intervalId = setInterval(() => {
-            setSeconds((prevSec) => prevSec + 1)
-            if (seconds === 59) {
-                setSeconds(0)
-                setMinutes((prevMin) => prevMin + 1)
+        const intervalId = setInterval(() => {
+            setSeconds((prevSec) => {
+                if (prevSec === 59) {
+                    setMinutes((prevMin) => prevMin + 1);
+                    return 0;
+                }
+                return prevSec + 1;
+            });
+            if (onTimeUpdate) {
+                onTimeUpdate({ minutes, seconds: seconds + 1 });
             }
         }, 1000);
 
         return () => clearInterval(intervalId);
-    }, [isRunning, seconds]);
+    }, [onTimeUpdate, minutes, seconds]);
 
     return (
         <View style={[ {flexDirection: 'row'}, style]}>
