@@ -3,7 +3,13 @@ import { View, Text, Button } from 'react-native';
 import AVVText from './AVVText';
 import { PreviewBackground } from '../utils/PreviewBackground';
 
-const AVVMatchTimer = ({ style, isoString, typography='body', textColor='white' }) => {
+const AVVMatchTimer = ({
+    style,
+    isoString,
+    period='FIRST_HALF',
+    typography='body',
+    textColor='white'
+}) => {
     const initialTime = new Date(isoString)
     const currTime = new Date()
     const difference = currTime - initialTime
@@ -29,7 +35,11 @@ const AVVMatchTimer = ({ style, isoString, typography='body', textColor='white' 
     }, [isRunning, seconds]);
 
     return (
-        <View style={[{ alignItems: 'center', padding: 20 }, style]}>
+        <View style={[ {flexDirection: 'row'}, style]}>
+            { period === "FIRST_HALF"
+                ? <AVVText style={{ color: textColor }} typography={typography}>1⁰  </AVVText>
+                : <AVVText style={{ color: textColor }} typography={typography}>2⁰  </AVVText>
+            }
             <AVVText
                 style={{ color: textColor }}
                 typography={typography}
@@ -47,6 +57,8 @@ export function AVVMatchTimer_Preview() {
         <PreviewBackground>
             <AVVMatchTimer textColor={'red'} isoString={'2024-10-26T21:45:00.131Z'} />
             <AVVMatchTimer isoString={'2024-10-26T21:45:00.131Z'} />
+            <AVVMatchTimer textColor={'red'} isoString={'2024-10-26T21:45:00.131Z'} period='SECOND_HALF'/>
+            <AVVMatchTimer isoString={'2024-10-26T21:45:00.131Z'} period='SECOND_HALF'/>
         </PreviewBackground>
     )
 }
