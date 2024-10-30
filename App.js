@@ -15,10 +15,10 @@ export default function App() {
     // <AVVTextField_Preview />
     // <AVVButton_Preview />
     // <AVVText_Preview />
-    // <AVVScore_Preview />
+    <AVVScore_Preview />
     // <AVVScore_Preview />
     // <AVVTable_Preview />
-    <AVVMatchTimer_Preview></AVVMatchTimer_Preview>
+    // <AVVMatchTimer_Preview></AVVMatchTimer_Preview>
   );
 }
 

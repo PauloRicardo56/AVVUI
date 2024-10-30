@@ -52,8 +52,10 @@ const SingleScore = ({team, score, isSelected, onPress}) => {
             disabled={!containerIsTouchable}
             onPress={onPress}
         >
-            <AVVText style={s.teamTitle} typography={'h4'}> {team} </AVVText>
-            <AVVText typography={'h1'}> {score} </AVVText>
+            <View style={[s.teamTitle]}>
+                <AVVText style={{textAlign: 'center'}} typography={'h4'} numberOfLines={2}> {team} </AVVText>
+            </View>
+            <AVVText typography={'h1'} numberOfLines={2}> {score} </AVVText>
         </TouchableOpacity>
     );
 }
@@ -81,13 +83,16 @@ const s = StyleSheet.create({
     teamTitle: {
         textAlign: 'center',
         width: '86%',
+        height: 70,
+        alignSelf: 'center',
+        justifyContent: 'center'
     }
 })
 
 export const AVVScore_Preview = () => {
     const mock = {
         home: {
-            team: 'VASCO',
+            team: 'Vasco da Gama',
             score: 6
         },
         away: {
