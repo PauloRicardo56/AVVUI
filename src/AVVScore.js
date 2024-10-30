@@ -5,7 +5,8 @@ import AVVText from "./AVVText";
 
 var containerIsTouchable = false;
 
-const AVVScore = ({ 
+const AVVScore = ({
+    style,
     home={ team: "", score: 0 }, 
     away={ team: "", score: 0 }, 
     isTouchable = false, 
@@ -21,7 +22,7 @@ const AVVScore = ({
     }, []);
     
     return (
-        <View style={s.container}>
+        <View style={[s.container, style]}>
             <SingleScore
                 team={home.team} 
                 score={home.score} 
