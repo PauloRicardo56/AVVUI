@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Button } from 'react-native';
 import AVVText from './AVVText';
 import { PreviewBackground } from '../utils/PreviewBackground';
+import brDate from '../utils/Time';
 
 const AVVMatchTimer = ({
     style,
@@ -12,14 +13,13 @@ const AVVMatchTimer = ({
     onTimeUpdate
 }) => {
     const initialTime = new Date(isoString)
-    const currTime = new Date()
+    const currTime = brDate()
     const difference = currTime - initialTime
     const differenceInSeconds = Math.floor(difference / 1000)
     const differenceInMinutes = Math.floor(differenceInSeconds / 60)
     const reminder = differenceInSeconds % 60
     const [seconds, setSeconds] = useState(reminder);
     const [minutes, setMinutes] = useState(differenceInMinutes);
-    const [isRunning, setIsRunning] = useState(false);
     const formatTwoDigits = (num) => String(num).padStart(2, '0');
 
     useEffect(() => {
@@ -60,10 +60,10 @@ export default AVVMatchTimer;
 export function AVVMatchTimer_Preview() {
     return(
         <PreviewBackground>
-            <AVVMatchTimer textColor={'red'} isoString={'2024-10-26T21:45:00.131Z'} />
-            <AVVMatchTimer isoString={'2024-10-26T21:45:00.131Z'} />
-            <AVVMatchTimer textColor={'red'} isoString={'2024-10-26T21:45:00.131Z'} period='SECOND_HALF'/>
-            <AVVMatchTimer isoString={'2024-10-26T21:45:00.131Z'} period='SECOND_HALF'/>
+            <AVVMatchTimer textColor={'red'} isoString={brDate().toISOString()} />
+            <AVVMatchTimer isoString={brDate().toISOString()} />
+            <AVVMatchTimer textColor={'red'} isoString={brDate().toISOString()} period='SECOND_HALF'/>
+            <AVVMatchTimer isoString={brDate().toISOString()} period='SECOND_HALF'/>
         </PreviewBackground>
     )
 }

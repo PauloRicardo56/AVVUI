@@ -8,6 +8,7 @@ export { default as AVVText } from "./src/AVVText";
 export { default as AVVTextField } from "./src/AVVTextField";
 export { default as AVVTitleTableCell } from "./src/AVVTitleTableCell";
 export { default as AVVMatchTimer } from "./src/AVVMatchTimer";
+export { default as brDate } from "./utils/Time";
 
 export const test = () => {
     return (
