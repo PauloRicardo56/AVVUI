@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from "firebase/firestore";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyC4wsF4qxwp04pUTS29dUidxXnsaToHqiY",
@@ -17,16 +17,16 @@ async function getFirestoreDoc(collection, document) {
     return await getDoc(doc(db, collection, document))
 }
 
-const requestPermission = async () => {
-    const authStatus = await messaging().requestPermission();
-    const enabled = authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
-                    authStatus === messaging.AuthorizationStatus.PROVISIONAL;
+// const requestPermission = async () => {
+//     const authStatus = await messaging().requestPermission();
+//     const enabled = authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
+//                     authStatus === messaging.AuthorizationStatus.PROVISIONAL;
 
-    if (enabled) {
-        console.log('Notification permission granted.');
-    } else {
-        Alert.alert("Permission denied", "Enable notifications to receive updates.");
-    }
-}
+//     if (enabled) {
+//         console.log('Notification permission granted.');
+//     } else {
+//         Alert.alert("Permission denied", "Enable notifications to receive updates.");
+//     }
+// }
 
 export default getFirestoreDoc
