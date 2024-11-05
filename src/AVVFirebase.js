@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { doc, getDoc, getFirestore } from "firebase/firestore";
+import { doc, getDoc, getFirestore, onSnapshot } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyC4wsF4qxwp04pUTS29dUidxXnsaToHqiY",
@@ -17,6 +17,14 @@ async function getFirestoreDoc(collection, document) {
     return await getDoc(doc(db, collection, document))
 }
 
+function eventListener(collection, document, completion) {
+    const unsub = onSnapshot(doc(db, collection, document), (doc) => {
+      completion(doc.data())
+    })
+  
+    return unsub
+}
+
 // const requestPermission = async () => {
 //     const authStatus = await messaging().requestPermission();
 //     const enabled = authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
@@ -29,4 +37,5 @@ async function getFirestoreDoc(collection, document) {
 //     }
 // }
 
-export default getFirestoreDoc
+export { getFirestoreDoc }
+export { eventListener }
