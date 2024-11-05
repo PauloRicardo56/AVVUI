@@ -2,20 +2,23 @@ import { StyleSheet, Text } from "react-native"
 import { Typography } from "../utils/Typography"
 import { PreviewBackground } from "../utils/PreviewBackground"
 
-const AVVText = ({ style, typography='body', children }) => {
+const AVVText = ({ style, typography='body', children, numberOfLines=0 }) => {
     return (
-        <Text style={[
-            { color: 'white' },
-            typography === 'h1' && s.h1,
-            typography === 'h4' && s.h4,
-            typography === 'h5' && s.h5,
-            typography === 'bodybold' && s.bodybold,
-            typography === 'body' && s.body,
-            typography === 'caption' && s.caption,
-            typography === 'annotation' && s.annotation,
-            typography === 'button' && s.button,
-            style,
-        ]}>
+        <Text
+            style={[
+                { color: 'white' },
+                typography === 'h1' && s.h1,
+                typography === 'h4' && s.h4,
+                typography === 'h5' && s.h5,
+                typography === 'bodybold' && s.bodybold,
+                typography === 'body' && s.body,
+                typography === 'caption' && s.caption,
+                typography === 'annotation' && s.annotation,
+                typography === 'button' && s.button,
+                style
+            ]}
+            numberOfLines={numberOfLines}
+        >
             {children}
         </Text>
     )
