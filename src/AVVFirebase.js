@@ -30,4 +30,4 @@ const requestPermission = async () => {
     }
 }
 
-export default requestPermission
+export default getFirestoreDoc
