@@ -19,17 +19,6 @@ function getFirestoreDB() {
   return db
 }
 
-// const firebaseConfig = {
-//     apiKey: "AIzaSyC4wsF4qxwp04pUTS29dUidxXnsaToHqiY",
-//     authDomain: "aovivasco-438802.firebaseapp.com",
-//     projectId: "aovivasco-438802",
-//     storageBucket: "aovivasco-438802.appspot.com",
-//     messagingSenderId: "236345160786",
-//     appId: "1:236345160786:web:068b973796f3281dc29b8b"
-// };
-// const app = initializeApp(firebaseConfig)
-// const db = getFirestore(app)
-
 // GET
 async function getFirestoreDoc(collection, document) {
     const db = getFirestoreDB()
