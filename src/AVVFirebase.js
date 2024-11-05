@@ -74,6 +74,7 @@ const requestPermission = async () => {
 
 async function getFCMToken() {
     const messaging = getMessaging()
+    console.log(111111)
     getToken(messaging, { vapidKey: "" } ).then((currentToken) => {
         if (currentToken) {
             // Sendo token to server
