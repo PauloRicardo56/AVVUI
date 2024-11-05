@@ -26,7 +26,7 @@ function eventListener(collection, document, completion) {
 }
 
 // PUSH
-export async function insertIndexZeroFirebaseArray(collectionName="", docName="", fieldName, data) {
+async function insertIndexZeroFirebaseArray(collectionName="", docName="", fieldName, data) {
     const currentArray = (await getFirestoreDoc(collectionName, docName))[fieldName]
     const updatedArray = [data, ...currentArray]
     const newObject = {
@@ -36,7 +36,7 @@ export async function insertIndexZeroFirebaseArray(collectionName="", docName=""
     pushFirebaseDoc(collectionName, docName, newObject)
 }
 
-export async function pushFirebaseDoc(collectionName="", docName="", data) {
+async function pushFirebaseDoc(collectionName="", docName="", data) {
     await setDoc(doc(db, collectionName, docName), data);
 }
 
@@ -59,4 +59,6 @@ async function deleteFirebaseDoc(collectionName="", docName="") {
 
 export { getFirestoreDoc }
 export { eventListener }
+export { insertIndexZeroFirebaseArray }
+export { pushFirebaseDoc }
 export { deleteFirebaseDoc }
