@@ -10,6 +10,7 @@ export { default as AVVTitleTableCell } from "./src/AVVTitleTableCell";
 export { default as AVVMatchTimer } from "./src/AVVMatchTimer";
 export { default as brDate } from "./utils/Time";
 export { default as AVVPrefetchView } from "./src/AVVPrefetchView"
+export { default as requestPermission } from "./src/AVVNotification"
 
 export const test = () => {
     return (
