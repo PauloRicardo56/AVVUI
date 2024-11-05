@@ -1,5 +1,8 @@
-import { initializeApp } from 'firebase/app';
-import { deleteDoc, doc, getDoc, getFirestore, onSnapshot, setDoc } from "firebase/firestore";
+import { initializeApp } from 'firebase/app'
+import { deleteDoc, doc, getDoc, getFirestore, onSnapshot, setDoc } from "firebase/firestore"
+import * as Notifications from 'expo-notifications'
+import * as Permissions from 'expo-permissions'
+import messaging from '@react-native-firebase/messaging'
 
 let firebaseApp
 let db
@@ -56,17 +59,19 @@ async function deleteFirebaseDoc(collectionName="", docName="") {
     await deleteDoc(doc(db, collectionName, docName));
 }
 
-// const requestPermission = async () => {
-//     const authStatus = await messaging().requestPermission();
-//     const enabled = authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
-//                     authStatus === messaging.AuthorizationStatus.PROVISIONAL;
+// Notifications
+const requestPermission = async () => {
+    const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS)
+    if (status !== 'granted') {
+        alert('Permission for notifications was denied');
+    }
+}
 
-//     if (enabled) {
-//         console.log('Notification permission granted.');
-//     } else {
-//         Alert.alert("Permission denied", "Enable notifications to receive updates.");
-//     }
-// }
+async function getFCMToken() {
+    const token = await messaging().getToken()
+    console.log('FCM Token:', token)
+    // Send this token to your backend to register the device for notifications
+}
 
 export { getFirestoreDoc }
 export { eventListener }
@@ -74,3 +79,5 @@ export { insertIndexZeroFirebaseArray }
 export { pushFirebaseDoc }
 export { deleteFirebaseDoc }
 export { initializeFirebase }
+export { requestPermission }
+export { getFCMToken }
