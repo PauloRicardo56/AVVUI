@@ -1,6 +1,6 @@
 {
   "name": "avvui",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "_main": "expo/AppEntry.js",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-native-firebase/app": "^21.3.0",
+    "@react-native-firebase/firestore": "^21.3.0",
     "@react-native-firebase/messaging": "^21.3.0",
     "expo": "~51.0.28",
     "expo-status-bar": "~1.12.1",
