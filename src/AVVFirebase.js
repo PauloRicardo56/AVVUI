@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app'
 import { deleteDoc, doc, getDoc, getFirestore, onSnapshot, setDoc } from "firebase/firestore"
 import * as Notifications from 'expo-notifications'
+import { getMessaging, getToken } from "firebase/messaging";
 
 let firebaseApp
 let db
