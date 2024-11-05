@@ -1,6 +1,5 @@
-import { initializeApp } from '@react-native-firebase/app';
-import { doc, getDoc, getFirestore } from '@react-native-firebase/firestore';
-import messaging, { firebase } from '@react-native-firebase/messaging';
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyC4wsF4qxwp04pUTS29dUidxXnsaToHqiY",
