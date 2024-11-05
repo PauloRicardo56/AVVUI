@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app'
 import { deleteDoc, doc, getDoc, getFirestore, onSnapshot, setDoc } from "firebase/firestore"
 import * as Notifications from 'expo-notifications'
-import { getMessaging, getToken } from "firebase/messaging";
+import { getMessaging } from 'firebase/messaging'
 
 let firebaseApp
 let db
@@ -73,7 +73,7 @@ const requestPermission = async () => {
 }
 
 async function getFCMToken() {
-    const messaging = getMessaging()
+    const messaging = getMessaging(app)
     console.log(111111)
     getToken(messaging, { vapidKey: "" } ).then((currentToken) => {
         if (currentToken) {
