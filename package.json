@@ -1,6 +1,6 @@
 {
   "name": "avvui",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "_main": "expo/AppEntry.js",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   "dependencies": {
     "expo": "~51.0.28",
     "expo-status-bar": "~1.12.1",
+    "firebase": "^11.0.1",
     "react": "18.2.0",
     "react-native": "0.74.5"
   },

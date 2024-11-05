@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "236345160786",
+    "project_id": "aovivasco-438802",
+    "storage_bucket": "aovivasco-438802.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236345160786:android:d729632d9809df16c29b8b",
+        "android_client_info": {
+          "package_name": "com.paulo.aovivasco"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ5sIKt0j6hkPNs0WOeSYnDinJbLtdMOg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
