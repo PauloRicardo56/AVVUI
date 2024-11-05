@@ -3,6 +3,7 @@ import { formatMonthDay, formatWeekDay } from "../utils/DateFormatter"
 import { formatVASCO } from "../utils/StringFormatter"
 import AVVTableCell from "./AVVTableCell"
 import AVVText from "./AVVText"
+import AVVMatchTimer from "avvui/src/AVVMatchTimer"
 
 const AVVGameTableCell = ({
     match,
@@ -33,8 +34,17 @@ const AVVGameTableCell = ({
                     <AVVText typography={'bodybold'}> {match.home.score} </AVVText>
                     <AVVText typography={'bodybold'}> {match.away.score} </AVVText>
                 </View>
-                
-                <AVVText style={s.status} typography={'annotation'}> {matchStatus(match.status)} </AVVText>
+
+                <View style={s.status}>
+                    { match.status === "FINAL_TIME"
+                        ? <AVVText typography={'annotation'}> {matchStatus(match.status)} </AVVText>
+                        : <AVVMatchTimer
+                            textColor="red"
+                            typography='annotation'
+                            isoString={match.period === 'FIRST_HALF' ? match.date : match.timeSecondHalfBegan } period={match.period}
+                        />
+                    }
+                </View>
             </View>
         </AVVTableCell>
     )
@@ -71,6 +81,6 @@ const s = StyleSheet.create({
 
     status: {
         width: 70,
-        textAlign: 'center',
+        alignItems: 'center'
     }
 })
