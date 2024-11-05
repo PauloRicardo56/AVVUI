@@ -2,7 +2,6 @@ import { initializeApp } from 'firebase/app'
 import { deleteDoc, doc, getDoc, getFirestore, onSnapshot, setDoc } from "firebase/firestore"
 import * as Notifications from 'expo-notifications'
 import * as Permissions from 'expo-permissions'
-import messaging from '@react-native-firebase/messaging'
 
 let firebaseApp
 let db
