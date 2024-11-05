@@ -72,23 +72,38 @@ const requestPermission = async () => {
 }
 
 async function getFCMToken() {
-    let token
-    try {
-        const projectId = Constants?.expoConfig?.extra?.eas?.projectId ?? Constants?.easConfig?.projectId;
-        if (!projectId) {
-            throw new Error('Project ID not found');
+    const messaging = getMessaging()
+    getToken(messaging, { vapidKey: "" } ).then((currentToken) => {
+        if (currentToken) {
+            // Sendo token to server
+            console.log('Token: ', currentToken)
+        } else {
+            // Show permission UI
+            console.log('No registration token available. Request permission to generate one.')
         }
-        token = (
-            await Notifications.getExpoPushTokenAsync({
-                projectId,
-            })
-        ).data;
-        console.log(token);
-    } catch (e) {
-        token = `${e}`;
-    }
-    return token
+    }).catch((err) => {
+        console.log('An error occurred while retrieving token. ', err);
+    })
 }
+
+// async function getFCMToken() {
+//     let token
+//     try {
+//         const projectId = Constants?.expoConfig?.extra?.eas?.projectId ?? Constants?.easConfig?.projectId;
+//         if (!projectId) {
+//             throw new Error('Project ID not found');
+//         }
+//         token = (
+//             await Notifications.getExpoPushTokenAsync({
+//                 projectId,
+//             })
+//         ).data;
+//         console.log(token);
+//     } catch (e) {
+//         token = `${e}`;
+//     }
+//     return token
+// }
 
 export { getFirestoreDoc }
 export { eventListener }
