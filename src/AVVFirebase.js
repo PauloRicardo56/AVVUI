@@ -73,7 +73,7 @@ const requestPermission = async () => {
 }
 
 async function getFCMToken() {
-    const messaging = getMessaging(app)
+    const messaging = getMessaging(firebaseApp)
     console.log(111111)
     getToken(messaging, { vapidKey: "" } ).then((currentToken) => {
         if (currentToken) {
