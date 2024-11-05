@@ -5,7 +5,7 @@ let firebaseApp
 let db
 
 // Initialize Firebase app and Firestore only once
-export function initializeFirebase(firebaseConfig) {
+function initializeFirebase(firebaseConfig) {
   if (!firebaseApp) {
     firebaseApp = initializeApp(firebaseConfig)
     db = getFirestore(firebaseApp)
@@ -84,3 +84,4 @@ export { eventListener }
 export { insertIndexZeroFirebaseArray }
 export { pushFirebaseDoc }
 export { deleteFirebaseDoc }
+export { initializeFirebase }

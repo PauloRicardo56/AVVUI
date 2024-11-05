@@ -11,7 +11,7 @@ export { default as AVVMatchTimer } from "./src/AVVMatchTimer";
 export { default as brDate } from "./utils/Time";
 export { default as AVVPrefetchView } from "./src/AVVPrefetchView"
 
-export { getFirestoreDoc, eventListener, deleteFirebaseDoc, pushFirebaseDoc, insertIndexZeroFirebaseArray } from "./src/AVVFirebase"
+export { getFirestoreDoc, eventListener, deleteFirebaseDoc, pushFirebaseDoc, insertIndexZeroFirebaseArray, initializeFirebase } from "./src/AVVFirebase"
 
 export const test = () => {
     return (
