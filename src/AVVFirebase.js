@@ -59,33 +59,33 @@ async function deleteFirebaseDoc(collectionName="", docName="") {
 }
 
 // Notifications
-// const requestPermission = async () => {
-//     const { status: existingStatus } = await Notifications.getPermissionsAsync()
-//     let finalStatus = existingStatus;
-//     if (existingStatus !== 'granted') {
-//       const { status } = await Notifications.requestPermissionsAsync();
-//       finalStatus = status;
-//     }
-//     if (finalStatus !== 'granted') {
-//       alert('Failed to get push token for push notification!');
-//       return;
-//     }
-// }
+const requestPermission = async () => {
+    // const { status: existingStatus } = await Notifications.getPermissionsAsync()
+    // let finalStatus = existingStatus;
+    // if (existingStatus !== 'granted') {
+    //   const { status } = await Notifications.requestPermissionsAsync();
+    //   finalStatus = status;
+    // }
+    // if (finalStatus !== 'granted') {
+    //   alert('Failed to get push token for push notification!');
+    //   return;
+    // }
+}
 
 async function getFCMToken() {
-    const messaging = getMessaging(firebaseApp)
-    console.log(111111)
-    getToken(messaging, { vapidKey: "" } ).then((currentToken) => {
-        if (currentToken) {
-            // Sendo token to server
-            console.log('Token: ', currentToken)
-        } else {
-            // Show permission UI
-            console.log('No registration token available. Request permission to generate one.')
-        }
-    }).catch((err) => {
-        console.log('An error occurred while retrieving token. ', err);
-    })
+    // const messaging = getMessaging(firebaseApp)
+    // console.log(111111)
+    // getToken(messaging, { vapidKey: "" } ).then((currentToken) => {
+    //     if (currentToken) {
+    //         // Sendo token to server
+    //         console.log('Token: ', currentToken)
+    //     } else {
+    //         // Show permission UI
+    //         console.log('No registration token available. Request permission to generate one.')
+    //     }
+    // }).catch((err) => {
+    //     console.log('An error occurred while retrieving token. ', err);
+    // })
 }
 
 // async function getFCMToken() {
