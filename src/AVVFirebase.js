@@ -1,7 +1,9 @@
-import { initializeApp } from 'firebase/app'
-import { deleteDoc, doc, getDoc, getFirestore, onSnapshot, setDoc } from "firebase/firestore"
+// import { initializeApp } from 'firebase/app'
+// import { deleteDoc, doc, getDoc, getFirestore, onSnapshot, setDoc } from "firebase/firestore"
+import { getApp } from '@react-native-firebase/app'
+import { deleteDoc, doc, getDoc, getFirestore, setDoc } from '@react-native-firebase/firestore'
 import * as Notifications from 'expo-notifications'
-import { getMessaging } from 'firebase/messaging'
+// import { getMessaging } from 'firebase/messaging'
 
 let firebaseApp
 let db
@@ -9,8 +11,8 @@ let db
 // Initialize Firebase app and Firestore only once
 function initializeFirebase(firebaseConfig) {
   if (!firebaseApp) {
-    firebaseApp = initializeApp(firebaseConfig)
-    db = getFirestore(firebaseApp)
+    firebaseApp = getApp(firebaseConfig)
+    db = getFirestore()
   }
 }
 
