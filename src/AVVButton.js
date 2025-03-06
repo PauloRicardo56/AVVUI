@@ -1,4 +1,4 @@
-import { Text, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import { PreviewBackground } from '../utils/PreviewBackground';
 import AVVText from './AVVText';
 

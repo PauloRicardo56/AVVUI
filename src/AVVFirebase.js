@@ -1,5 +1,7 @@
-import { initializeApp } from 'firebase/app';
-import { deleteDoc, doc, getDoc, getFirestore, onSnapshot, setDoc } from "firebase/firestore";
+import { initializeApp } from 'firebase/app'
+import { deleteDoc, doc, getDoc, getFirestore, onSnapshot, setDoc } from "firebase/firestore"
+import * as Notifications from 'expo-notifications'
+// import { getMessaging } from 'firebase/messaging'
 
 let firebaseApp
 let db
@@ -56,16 +58,53 @@ async function deleteFirebaseDoc(collectionName="", docName="") {
     await deleteDoc(doc(db, collectionName, docName));
 }
 
-// const requestPermission = async () => {
-//     const authStatus = await messaging().requestPermission();
-//     const enabled = authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
-//                     authStatus === messaging.AuthorizationStatus.PROVISIONAL;
+// Notifications
+const requestPermission = async () => {
+    const { status: existingStatus } = await Notifications.getPermissionsAsync()
+    let finalStatus = existingStatus;
+    if (existingStatus !== 'granted') {
+      const { status } = await Notifications.requestPermissionsAsync();
+      finalStatus = status;
+    }
+    if (finalStatus !== 'granted') {
+      alert('Failed to get push token for push notification!');
+      return;
+    }
+}
 
-//     if (enabled) {
-//         console.log('Notification permission granted.');
-//     } else {
-//         Alert.alert("Permission denied", "Enable notifications to receive updates.");
+async function getFCMToken() {
+    const messaging = getMessaging(firebaseApp)
+    console.log(111111)
+    getToken(messaging, { vapidKey: "" } ).then((currentToken) => {
+        if (currentToken) {
+            // Sendo token to server
+            console.log('Token: ', currentToken)
+        } else {
+            // Show permission UI
+            console.log('No registration token available. Request permission to generate one.')
+        }
+    }).catch((err) => {
+        console.log('An error occurred while retrieving token. ', err);
+    })
+}
+
+// async function getFCMToken() {
+//     let token
+//     try {
+//         const projectId = Constants?.expoConfig?.extra?.eas?.projectId ?? Constants?.easConfig?.projectId;
+//         if (!projectId) {
+//             throw new Error('Project ID not found');
+//         }
+//         token = (
+//             await Notifications.getExpoPushTokenAsync({
+//                 projectId,
+//             })
+//         ).data;
+//         console.log(token);
+//     } catch (e) {
+//         token = `${e}`;
 //     }
+//     return token
 // }
 
 export { getFirestoreDoc }
@@ -74,3 +113,5 @@ export { insertIndexZeroFirebaseArray }
 export { pushFirebaseDoc }
 export { deleteFirebaseDoc }
 export { initializeFirebase }
+export { requestPermission }
+export { getFCMToken }
