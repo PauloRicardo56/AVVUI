@@ -7,6 +7,7 @@ const AVVTitleTableCell = ({
     orientation='left',
     isSelectionEnabled=false,
     isSelected=false,
+    hideSeparator=false,
     onPress=() => {}
 }) => {
     return (
@@ -14,6 +15,7 @@ const AVVTitleTableCell = ({
             style={{ height: 40 }}
             isSelectionEnabled={isSelectionEnabled}
             isSelected={isSelected}
+            hideSeparator={hideSeparator}
             onPress={onPress}
         >
             { orientation == "left"
