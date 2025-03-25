@@ -6,7 +6,7 @@ export const PreviewBackground = ({ children, gap = 26, paddingHorizontal = 0 })
             flex: 1,
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: '#0f0f0f',
+            backgroundColor: '#FBFBFB',
             gap: gap,
             paddingHorizontal: paddingHorizontal
         }

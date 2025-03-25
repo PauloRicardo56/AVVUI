@@ -3,7 +3,7 @@ import { formatMonthDay, formatWeekDay } from "../utils/DateFormatter"
 import { formatVASCO } from "../utils/StringFormatter"
 import AVVTableCell from "./AVVTableCell"
 import AVVText from "./AVVText"
-import AVVMatchTimer from "avvui/src/AVVMatchTimer"
+import AVVMatchTimer from "./AVVMatchTimer"
 
 const AVVGameTableCell = ({
     match,

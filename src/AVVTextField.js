@@ -22,8 +22,8 @@ const AVVTextField = ({
                 style={s.input}
                 value={value}
                 placeholder={placeholder}
-                placeholderTextColor={"#464646"}
-                cursorColor={'white'}
+                placeholderTextColor={"#C8C8C8"}
+                cursorColor={'black'}
                 onChangeText={onChangeText}
                 onEndEditing={onEndEditing}
             />
@@ -51,12 +51,14 @@ const s = StyleSheet.create({
 
     input: {
         borderRadius: 6,
-        backgroundColor: '#1B1B1B',
-        color: 'white',
+        backgroundColor: '#FFFFFF',
+        color: 'black',
         paddingHorizontal: 12,
         paddingVertical: 8,
         fontSize: Typography.body.fontSize,
         fontWeight: Typography.body.fontWeight,
+        borderWidth: 1,
+        borderColor: '#D9D9D9'
     },
 
     subtitle: {

@@ -6,7 +6,6 @@ const AVVText = ({ style, typography='body', children, numberOfLines=0 }) => {
     return (
         <Text
             style={[
-                { color: 'white' },
                 typography === 'h1' && s.h1,
                 typography === 'h4' && s.h4,
                 typography === 'h5' && s.h5,
