@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList, RefreshControl, StyleSheet, View } from "react-native";
 import { PreviewBackground } from "../utils/PreviewBackground";
 import AVVTableCell from "./AVVTableCell";
 import { useState, useCallback } from "react";
@@ -6,7 +6,7 @@ import { useState, useCallback } from "react";
 import AVVGameTableCell from "./AVVGameTableCell";
 import AVVTitleTableCell from "./AVVTitleTableCell";
 
-const AVVTable = ({ style, data, avvCell=()=>{} }) => {
+const AVVTable = ({ style, data, onRefresh=()=>{}, isRefreshing=false, avvCell=()=>{} }) => {
     const [selectedIndex, setSelectedIndex] = useState(-1)
 
     return (
@@ -14,7 +14,13 @@ const AVVTable = ({ style, data, avvCell=()=>{} }) => {
             style={[s.container, style]}
             data={data}
             // TODO: figure way to clear selected index when reloading table, so the background will not appear (current implementation does not work.)
-            onLayout={ () => { setSelectedIndex(-1); console.log(1234567894561230) } }
+            onLayout={ () => { setSelectedIndex(-1) } }
+            refreshControl={
+                <RefreshControl
+                    refreshing={isRefreshing}
+                    onRefresh={onRefresh}
+                />
+            }
             renderItem={({ item, index }) => (
                 <View key={index}>
                     {avvCell(
@@ -35,6 +41,7 @@ const s = StyleSheet.create({
     container: {
         width: '100%',
         paddingVertical: 10,
+        paddingBottom: 64
     }
 })
 
