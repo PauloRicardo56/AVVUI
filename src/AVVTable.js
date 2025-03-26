@@ -13,6 +13,7 @@ const AVVTable = ({ style, data, onRefresh=()=>{}, isRefreshing=false, avvCell=(
         <FlatList
             style={[s.container, style]}
             data={data}
+            contentContainerStyle={{ paddingBottom: 16 }}
             // TODO: figure way to clear selected index when reloading table, so the background will not appear (current implementation does not work.)
             onLayout={ () => { setSelectedIndex(-1) } }
             refreshControl={
@@ -41,7 +42,6 @@ const s = StyleSheet.create({
     container: {
         width: '100%',
         paddingVertical: 10,
-        paddingBottom: 64
     }
 })
 

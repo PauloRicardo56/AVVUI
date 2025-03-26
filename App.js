@@ -12,10 +12,10 @@ import { AVVMatchTimer_Preview } from './src/AVVMatchTimer';
 export default function App() {
   return (
     // <></>
-    // <AVVTextField_Preview />
+    <AVVTextField_Preview />
     // <AVVButton_Preview />
     // <AVVText_Preview />
-    <AVVScore_Preview />
+    // <AVVScore_Preview />
     // <AVVScore_Preview />
     // <AVVTable_Preview />
     // <AVVMatchTimer_Preview></AVVMatchTimer_Preview>
